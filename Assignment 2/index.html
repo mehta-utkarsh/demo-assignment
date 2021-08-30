@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <h1>Survey Form</h1>
+
+    <!-- Create Form -->
+    <form id="form">
+      <!-- Details -->
+      <div class="form-control">
+        <label for="name" id="label-name"> Name </label>
+
+        <!-- Input Type Text -->
+        <input type="text" id="name" placeholder="Enter your name" />
+      </div>
+
+      <div class="form-control">
+        <label for="email" id="label-email"> Email </label>
+
+        <!-- Input Type Email-->
+        <input type="email" id="email" placeholder="Enter your email" />
+      </div>
+
+      <div class="form-control">
+        <label for="age" id="label-age"> Age </label>
+
+        <!-- Input Type Text -->
+        <input type="text" id="age" placeholder="Enter your age" />
+      </div>
+
+      <div class="form-control">
+        <label
+          >Please select your Hobbies
+          <small>(Select all Hobbies)</small>
+        </label>
+        <!-- Input Type Checkbox -->
+        <label id="check" for="input-1">
+          <input type="checkbox" name="input" />Singing</label
+        >
+        <label id="check" for="input-2">
+          <input type="checkbox" name="input" />Dancing</label
+        >
+        <label id="check" for="input-3">
+          <input type="checkbox" name="input" />Sports</label
+        >
+        <label id="check" for="input-4">
+          <input type="checkbox" name="input" />Music</label
+        >
+        <label id="check" for="input-5">
+          <input type="checkbox" name="input" />Art</label
+        >
+        <label id="check" for="input-6">
+          <input type="checkbox" name="input" />Camping</label
+        >
+        <label id="check" for="input-7">
+          <input type="checkbox" name="input" />Drama</label
+        >
+        <label id="check" for="input-8">
+          <input type="checkbox" name="input" />Debate/Extempore</label
+        >
+        <label id="check" for="input-9">
+          <input type="checkbox" name="input" />Cooking</label
+        >
+      </div>
+
+      <div class="form-control">
+        <label> Gender </label>
+
+        <!-- Input Type Radio Button -->
+        <label id="radio" for="gender-1">
+          <input type="radio" id="gender-1" name="gender" />Male
+        </label>
+        <label id="radio" for="gender-2">
+          <input type="radio" id="gender-2" name="gender" />Female
+        </label>
+        <label for="gender-3">
+          <input type="radio" id="gender-3" name="gender" />Transgender
+        </label>
+      </div>
+
+      <div class="form-control">
+        <label for="role" id="label-role">
+          Which role describes you Best?
+        </label>
+
+        <!-- Dropdown options -->
+        <select name="role" id="role">
+          <option value="student">Student</option>
+          <option value="intern">Intern</option>
+          <option value="professional">Professional</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-control">
+        <label for="comment"> Special Notes </label>
+
+        <!-- multi-line text input control -->
+        <textarea
+          name="comment"
+          id="comment"
+          placeholder="Enter your comment here"
+        >
+        </textarea>
+      </div>
+
+      <!-- Multi-line Text Input Control -->
+      <button type="submit" value="submit">Submit</button>
+    </form>
+  </body>
+</html>
