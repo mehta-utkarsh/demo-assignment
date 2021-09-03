@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 5</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <script>
+      var rowno = 1;
+
+      function myname() {
+        let name = prompt("Enter name:", "");
+        let age = prompt("Enter age:", "");
+        var table = document.getElementById("table");
+        var row = table.insertRow(rowno);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = name;
+        cell2.innerHTML = age;
+        rowno += 1;
+      }
+
+      function deleterow() {
+        if (rowno > 1) {
+          document.getElementById("table").deleteRow(rowno - 1);
+          rowno -= 1;
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-light">
+    <div class="col-md-12 header bg-light justify-content-center mt-3 ml-3">
+      <div>
+        <h3>Assignment - 6</h3>
+      </div>
+    </div>
+    <div class="bg-light col-md-6 mt- 3 ml-3">
+      <h5 class="md-3">
+        Problem Statment - "to create a prompt which will take name and age and
+        then display those value in table and also we can delete those value
+        from table."
+      </h5>
+      <button class="btn btn-primary" id="btn-enter" onclick="myname()">
+        Enter
+      </button>
+      <button class="btn btn-danger" id="btn-enter" onclick="deleterow()">
+        Delete
+      </button>
+    </div>
+    <div class="col-md-6 table text-center my-5">
+      <table id="table" class="table">
+        <thead>
+          <tr>
+            <th scope="col">NAME</th>
+            <th scope="col">AGE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="name"></td>
+            <td id="age"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
